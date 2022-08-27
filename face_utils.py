@@ -8,8 +8,8 @@ import numpy as np
 class face_utils:
 
     def __init__(self):
-        # self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.device = torch.device('cpu')
+        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        # self.device = torch.device('cpu')
         print('Running on device: {}'.format(self.device))
         workers = 0 if os.name == 'nt' else 4
         if self.device == torch.device('cpu'):
@@ -169,36 +169,40 @@ if __name__ == "__main__":
 
     bs = face_utils()
 
-    # images = Image.open(r"D:\PycharmProject\face_search\Pictures\Agnes Monica\1636086186(1).jpg")
-    # bs.face_detacher(images.convert("RGB"), r"D:\PycharmProject\face_search\Pictures\Agnes Monica\cut.jpg")
+    # 检测人脸并保存
+    images = Image.open(r"./test_dataset/test_folder/QQ截图20211216205822.png")
+    bs.face_detacher(images.convert("RGB"), r"./test_dataset/test_folder/cut.jpg")
 
-    img1 = Image.open("test_dataset/6.jpg")
-    img1_embedding = bs.face_embedding(img1)
-    img2 = Image.open("test_dataset/5.jpg")
-    img2_embedding = bs.face_embedding(img2)
+    # 计算人脸相似度
+    img1 = Image.open("test_dataset/4_1.png")
+    img1_embedding = bs.face_embedding(img1.convert("RGB"))
+    img2 = Image.open("test_dataset/4.jpg")
+    img2_embedding = bs.face_embedding(img2.convert("RGB"))
     print(bs.get_similar_matrix(img1_embedding, img2_embedding)[0][0])
 
+    # 编码文件夹中的人脸
     images_path = "test_dataset/test_folder"
     images_embedding_matrix = bs.face_embedding_folder(images_path)
     np.save("test_matrix.npy", images_embedding_matrix)
 
+    # 查找最相似的top k个人脸
     load_matrix = np.load("test_matrix.npy")
     img3 = Image.open("test_dataset/1_1.jpg")
-    img3_embedding = bs.face_embedding(img3)
+    img3_embedding = bs.face_embedding(img3.convert("RGB"))
     print(bs.find_topk(load_matrix, img3_embedding))
 
+    # 已知id 求去重之后的人脸列表和人脸个数
     load_matrix = np.load("test_matrix.npy")
     face_list, count = bs.id2face_count(load_matrix)
     print(face_list)
     print(count)
 
+    # 添加人脸，删除人脸
     load_matrix = np.load("test_matrix.npy")
     temp = bs.add_person(load_matrix, img1_embedding)
     print(temp.shape)
-
     temp1 = bs.delete_person(load_matrix, 0)
     print(temp1.shape)
-
 
 
 
