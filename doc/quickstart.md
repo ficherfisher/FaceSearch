@@ -23,7 +23,7 @@ detach(self, img, file_save_path)
     input: img_path -> 输入图片(PIL图片格式)
            file_path -> 保存文件路径
     output: prob -> 探测人脸的概率
-<img src="./doc/img/show1.png" width="600">
+<img src="img/show1.png" width="600">
 
 
 3.将单张人脸进行编码，返回编码    
@@ -50,8 +50,8 @@ find_topk(self, base_embeddings, img_embedding, k=5)
            img_embedding -> 通过face_embedding得到的单张的人脸编码,
            k -> 在base_embeddings中查找前k个相似度高人脸索引,
     output: idx_prob -> 一个字典，形式为{index :prob},
-<img src="./doc/img/show2.png" width="600"><br>
-<img src="./doc/img/show3.png" width="600">
+<img src="img/show2.png" width="600"><br>
+<img src="img/show3.png" width="600">
 
 
 6.已知id 求去重之后的人脸个数
@@ -60,4 +60,4 @@ id2face_count(self, embedding_matrix)
 ```
     input: embedding_matrix, 通过id搜寻到的人脸，将其向量取出来得到矩阵,
     output: prob_matrix, 返回相似矩阵,
-<img src="./doc/img/show4.png" width="600">
+<img src="img/show4.png" width="600">
