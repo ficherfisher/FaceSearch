@@ -15,7 +15,7 @@ English | [简体中文](README_ch.md)
 
 ## 简介
 
-FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对比工具库，助力开发者训练出更好的模型，并应用落地。
+FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对比工具库，并应用落地。
 
 **Recent updates**
 
@@ -25,25 +25,42 @@ FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对�
 - 寻找最相似的人脸
 - 已知id 求去重之后的人脸列表和人脸个数
 
-## Features
+## 特征
 - FaceSearch一个高质量预训练模型，准确的识别效果
-    - Ultra lightweight PP-OCRv2 series models: detection (3.1M) + direction classifier (1.4M) + recognition 8.5M) = 13.0M
-    - Ultra lightweight PP-OCR mobile series models: detection (3.0M) + direction classifier (1.4M) + recognition (5.0M) = 9.4M
-    - General PP-OCR server series models: detection (47.1M) + direction classifier (1.4M) + recognition (94.9M) = 143.4M
-    - Support Chinese, English, and digit recognition, vertical text recognition, and long text recognition
-    - Support multi-language recognition: Korean, Japanese, German, French
-- Rich toolkits related to the OCR areas
-    - Semi-automatic data annotation tool, i.e., PPOCRLabel: support fast and efficient data annotation
-    - Data synthesis tool, i.e., Style-Text: easy to synthesize a large number of images which are similar to the target scene image
-- Support user-defined training, provides rich predictive inference deployment solutions
-- Support PIP installation, easy to use
-- Support Linux, Windows, MacOS and other systems
+    - 基于vgg模型用私有数据集微调
+    - 通用的FaceSearch模型：111.9M
+    - 支持多种尺度大小的图片，清晰度较低图片同样适用
+- 可运行于linux、windows等多种系统
 
-## Visualization
+## FaceSearch 系列模型
 
-<div align="center">
-    <img src="doc/imgs_results/ch_ppocr_mobile_v2.0/test_add_91.jpg" width="800">
-    <img src="doc/imgs_results/multi_lang/img_01.jpg" width="800">
-    <img src="doc/imgs_results/multi_lang/img_02.jpg" width="800">
-</div>
+|模型|简介|下载地址|
+|------------|---------------|---------------|
+|facenet_vggface2.pt|vgg网络参数|[大小111.9M]()|
+|face_detacher.pt/face_embedding.pt|FaceSearch参数(GPU)|[大小1.9M + 109.4M]()|
+|face_detacher_cpu.pt/face_embedding_cpu.pt|FaceSearch参数(CPU)|[大小1.9M + 109.4M]()|
+
+## 文档教程
+- [运行环境准备](./doc/environment.md)
+- [快速开始](./doc/quickstart.md)
+- FaceSearch产业落地
+    - [人脸探测](./xingqiuManga/xingManga.md)
+    - [人脸编码](./xingqiuManga/xingManga.md)
+    - [编码文件夹](./xingqiuManga/xingManga.md)
+    - [寻找最相似的人脸](./xingqiuManga/xingManga.md)
+    - [去重人脸](./xingqiuManga/xingManga.md)
+
+- [联系作者](yupengxiong87@gmail.com)
   
+## 效果展示
+<div align="center">
+    <img src="./doc/img/show1.png" width="400">
+    <img src="./doc/img/show2.png" width="400">
+    <img src="./doc/img/show3.png" width="400">
+    <img src="./doc/img/show4.png" width="400">
+</div>
+
+
+
+
+
