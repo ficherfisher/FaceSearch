@@ -44,11 +44,11 @@ FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对�
 - [运行环境准备](./doc/environment.md)
 - [快速开始](./doc/quickstart.md)
 - FaceSearch产业落地
-    - [人脸探测](./xingqiuManga/xingManga.md)
-    - [人脸编码](./xingqiuManga/xingManga.md)
-    - [编码文件夹](./xingqiuManga/xingManga.md)
-    - [寻找最相似的人脸](./xingqiuManga/xingManga.md)
-    - [去重人脸](./xingqiuManga/xingManga.md)
+    - [人脸探测](./doc/quickstart.md)
+    - [人脸编码](./doc/quickstart.md)
+    - [编码文件夹](./doc/quickstart.md)
+    - [寻找最相似的人脸](./doc/quickstart.md)
+    - [去重人脸](./doc/quickstart.md)
 
 - [联系作者](yupengxiong87@gmail.com)
   
