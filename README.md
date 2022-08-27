@@ -54,10 +54,13 @@ FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对�
   
 ## 效果展示
 <div align="center">
-    <img src="./doc/img/show1.png" width="400">
-    <img src="./doc/img/show2.png" width="400">
-    <img src="./doc/img/show3.png" width="400">
-    <img src="./doc/img/show4.png" width="400">
+    <img src="./doc/img/show1.png" width="600">
+    <br>
+    <img src="./doc/img/show2.png" width="600">
+    <br>
+    <img src="./doc/img/show3.png" width="600">
+    <br>
+    <img src="./doc/img/show4.png" width="600">
 </div>
 
 
