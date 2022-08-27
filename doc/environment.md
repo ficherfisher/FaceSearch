@@ -195,9 +195,9 @@ Linux用户可选择Anaconda方式运行。
   conda activate facesearch
   conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
   ```
+
+  <img src="img/pytorch.png" alt="add conda to path" width="500" align="center"/>
+  
   [更多请阅读](https://pytorch.org/)
-
-  <img src="./install/windows/pytorch.png" alt="add conda to path" width="500" align="center"/>
-
 
 
