@@ -54,12 +54,16 @@ FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对�
   
 ## 效果展示
 <div align="center">
+    <h5>人脸探测</h5>
     <img src="./doc/img/show1.png" width="600">
     <br>
+    <h5>人脸相似度</h5>
     <img src="./doc/img/show2.png" width="600">
     <br>
+    <h5>寻找最相似的人脸</h5>
     <img src="./doc/img/show3.png" width="600">
     <br>
+    <h5>已知id 求去重之后的人脸列表和人脸个数</h5>
     <img src="./doc/img/show4.png" width="600">
 </div>
 
