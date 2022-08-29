@@ -36,9 +36,9 @@ FaceSearch旨在打造一套丰富、领先、且实用的人脸检测识别对�
 
 |模型|简介|下载地址|
 |------------|---------------|---------------|
-|facenet_vggface2.pt|vgg网络参数|[大小111.9M]()|
-|face_detacher.pt/face_embedding.pt|FaceSearch参数(GPU)|[大小1.9M + 109.4M]()|
-|face_detacher_cpu.pt/face_embedding_cpu.pt|FaceSearch参数(CPU)|[大小1.9M + 109.4M]()|
+|facenet_vggface2.pt|vgg网络参数|[大小111.9M](https://drive.google.com/drive/folders/1-EFmmLOdv7letRBDescRFrKrQqop_Jle)|
+|face_detacher.pt/face_embedding.pt|FaceSearch参数(GPU)|[大小1.9M + 109.4M](https://drive.google.com/drive/folders/1-EFmmLOdv7letRBDescRFrKrQqop_Jle)|
+|face_detacher_cpu.pt/face_embedding_cpu.pt|FaceSearch参数(CPU)|[大小1.9M + 109.4M](https://drive.google.com/drive/folders/1-EFmmLOdv7letRBDescRFrKrQqop_Jle)|
 
 ## 文档教程
 - [运行环境准备](./doc/environment.md)
